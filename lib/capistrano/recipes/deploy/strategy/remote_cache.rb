@@ -48,7 +48,7 @@ module Capistrano
           end
 
           def copy_exclude
-            @copy_exclude ||= Array(configuration.fetch(:copy_exclude, [])) + '.git/*'
+            @copy_exclude ||= Array(configuration.fetch(:copy_exclude, [])) << '.git/*'
           end
       end
 
